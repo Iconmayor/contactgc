@@ -1,115 +1,154 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-	height: 100vh;
-	width: 100%;
-}
 
-.container{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 100px;
-}
+nav{
+    position: fixed;
+    background: rgb(0, 3, 5);
+    width: 100%;
+    padding: 10px 0;
+    z-index: 2000;
+  }
+  nav .menu{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .menu .logo a{
+    text-decoration: none;
+    color:gold;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .menu ul{
+    display: inline-flex;
+    align-items: center;
+  }
+  .menu ul li{
+    list-style: none;
+    margin-left: 20px;
+  }
+  title{
+      color: rgb(68, 128, 151);
+      font-size: 100%;
+  }
+  .menu ul li:first-child{
+    margin-left: 0px;
+  }
+  .menu ul li a{
+    text-decoration: none;
+    color: rgb(11, 223, 238);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .menu ul li a:hover{
+    background: gold;
+    color: black;
+  }
+  content{
+    max-width: 125px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 
-.container:after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: url("gc.png") no-repeat center;
-	background-size: cover;
-	filter: blur(50px);
-	z-index: -1;
-}
-.contact-box{
-	max-width: 850px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
-}
+  }
+  
+  .content a{
+   text-decoration: none;
+    color: black;
+    background: gold;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 20px ;
+    border: 2px solid gold;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+   
+  .content  a:hover{
+    background:rgb(7, 190, 214);
+    border: 2px solid black;
+    color: gold;
+    transition: .4s ;
+
+  }
+  .container{
+padding-top: 250px;
+margin-left: 50px;
+  }
+  .container .hero-text{
+margin-bottom: 20px;
+  }
+  .container .hero-text h2{
+    color:hwb(51 0% 0%);
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 10px 0 10px ;
+  }
+
+  span{
+    color: rgb(9, 17, 17);
+  }
+  .container .hero-text h3{
+    color: rgb(10, 12, 12);
+    font-weight: 400;
+    font-size: large;
+  }
+  .container .hero-text p{
+    width: 440px;
+    color: rgb(10, 3, 3);
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  button{
+    color: black;
+    background: gold;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 20px ;
+    border: 2px solid gold;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  button:hover{
+    background: black;
+    border: 2px solid black;
+    color: gold;
+    transition: .4s ;
+  }
+  .right{
+    min-height: 50vh;
+    height: 50%;
+    width: 50%;
+    background-position: CENTER;
+    background-size: COVER;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2 );
+    align-items: center;
+    grid-gap: 4rem;
+  }
+
+  
 
 
 
-.right{
-	padding: 25px 40px;
-}
+  
 
-h2{
-	position: relative;
-	padding: 0 0 10px;
-	margin-bottom: 10px;
-}
 
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: hsla(200, 38%, 6%, 0.973);
-}
-
-.field{
-	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color: rgba(230, 230, 230, 0.6);
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	transition: .3s;
-}
-
-.field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-textarea{
-	min-height: 150px;
-}
-
-.btn{
-	width: 100%;
-	padding: 0.5rem 1rem;
-	background-color: rgb(15, 15, 7);
-	color: #fff;
-	font-size: 1.1rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: .3s;
-}
-
-.btn:hover{
-    background-color: yellow;
-}
-
-.field:focus{
-    border: 2px solid rgba(30,85,250,0.47);
-    background-color: #fff;
-}
-@media screen and (max-width: 880px){
-	.contact-box{
-		grid-template-columns: 1fr;
-	}
-	.left{
-		height: 200px;
-	}
-}
